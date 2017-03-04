@@ -54,7 +54,13 @@ class heap():
         self.keys[0] = self.keys[self.size-1]
         self.es[0] = self.es[self.size-1]
         self.size -= 1
-        self.max_heapify(0)
+        
+        self.keys.pop()
+        self.es.pop()
+
+        if self.size > 0:
+            self.max_heapify(0)
+
         return largest, largest_e
 
     def move_up(self, i):

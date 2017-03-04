@@ -24,7 +24,11 @@ def _test_basic(hp):
     _test_e2i(hp)
     _test_heap_property(hp)
 
-    
+    assert hp.size == len(hp.keys)
+    assert hp.size == len(hp.es)
+    assert hp.size == len(hp.e2i)
+
+
 def test_build_heap(hp):
     _test_basic(hp)
 
